@@ -97,13 +97,13 @@ def init_database():
             cursor.execute("SELECT COUNT(*) as cnt FROM teachers")
             if cursor.fetchone()[0] == 0:
                 teachers = [
-                    ('T001', '张明远', 'https://picsum.photos/id/100/100/100', '教授', '计算机学院',
+                    ('T001', '蔡乐', 'https://picsum.photos/id/100/100/100', '教授', '计算机学院',
                      '10年教学经验，专注全栈开发'),
-                    ('T002', '陈雅琳', 'https://picsum.photos/id/20/100/100', '副教授', '设计学院',
+                    ('T002', '高原', 'https://picsum.photos/id/20/100/100', '副教授', '设计学院',
                      '前腾讯高级设计师，8年UI/UX经验'),
-                    ('T003', '王瑞华', 'https://picsum.photos/id/26/100/100', '讲师', '数据科学学院',
+                    ('T003', '丘陵', 'https://picsum.photos/id/26/100/100', '讲师', '数据科学学院',
                      'Kaggle竞赛导师，擅长数据分析'),
-                    ('T004', '李婉晴', 'https://picsum.photos/id/29/100/100', '副教授', '人工智能学院',
+                    ('T004', '浮华', 'https://picsum.photos/id/29/100/100', '副教授', '人工智能学院',
                      'AI领域专家，发表多篇顶会论文'),
                 ]
                 cursor.executemany(
@@ -120,16 +120,16 @@ def init_database():
             if cursor.fetchone()[0] == 0:
                 courses = [
                     ('C001', 'Python全栈开发', teacher_map['T001'], 'https://picsum.photos/id/0/300/200',
-                     '从零基础到全栈工程师，涵盖Python基础、Django、Flask、前端框架', '编程开发', 60, 2999, 3999, 25, 0,
+                     '从零基础到全栈工程师，涵盖Python基础、Django、Flask、前端框架', '编程开发', 60,0, 3999, 25, 0,
                      '2024-06-01', '每周二、四 19:00-21:00', '教学楼A-101', 'open'),
                     ('C002', 'UI/UX设计实战', teacher_map['T002'], 'https://picsum.photos/id/10/300/200',
-                     '产品设计思维、Figma工具、用户研究方法论', '设计创意', 40, 2499, 3299, 20, 0, '2024-06-03',
+                     '产品设计思维、Figma工具、用户研究方法论', '设计创意', 40, 0, 3299, 20, 0, '2024-06-03',
                      '每周一、三 19:00-21:00', '设计楼B-202', 'open'),
                     ('C003', '机器学习入门', teacher_map['T003'], 'https://picsum.photos/id/24/300/200',
-                     '机器学习基础算法、Scikit-learn、实战项目', '人工智能', 50, 3299, 4299, 30, 0, '2024-06-05',
+                     '机器学习基础算法、Scikit-learn、实战项目', '人工智能', 50, 0, 4299, 30, 0, '2024-06-05',
                      '每周五 19:00-22:00', '实验楼C-303', 'open'),
                     ('C004', '大模型应用开发', teacher_map['T004'], 'https://picsum.photos/id/88/300/200',
-                     'GPT API、LangChain、AI应用构建实战', '人工智能', 40, 3999, 4999, 20, 0, '2024-07-01',
+                     'GPT API、LangChain、AI应用构建实战', '人工智能', 40, 0, 4999, 20, 0, '2024-07-01',
                      '每周六 14:00-18:00', '科技楼D-404', 'open'),
                 ]
                 cursor.executemany("""
